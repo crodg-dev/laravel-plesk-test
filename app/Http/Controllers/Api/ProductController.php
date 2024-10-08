@@ -27,6 +27,8 @@ class ProductController extends Controller
         $new_product->quantity = $request->quantity;
         $new_product->price = $request->price;
 
+        $new_product->save();
+
         return response()->json($new_product, 201);
     }
 
